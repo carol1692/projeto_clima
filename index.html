@@ -1,13 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <script src="api.js"></script>
+  <div class="container">
+    <h1>🌤️ Previsão do Tempo</h1>
+
+    <div class="search-box">
+      <input type="text" id="cidade" placeholder="Digite o nome da cidade...">
+      <button id="buscar">Buscar</button>
+    </div>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
