@@ -52,9 +52,9 @@ projeto_clima
 ## 🖥️ Como Executar o Projeto
 
 1. **Clone o repositório**
-   ```bash
-    git clone https://github.com/SEU_USUARIO/projeto-clima.git
-   ```
+```bash
+ git clone https://github.com/SEU_USUARIO/projeto-clima.git
+```
 
 2. **Acesse a pasta**
 ```bash
