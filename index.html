@@ -17,7 +17,7 @@
 
 <body>
     <div class="container">
-        <h1>🌤️ Previsão do Tempo</h1>
+        <h1 id="titulo">🌤️ Previsão do Tempo</h1>
 
         <div class="search-box">
             <input type="text" id="cidade" placeholder="Digite o nome da cidade...">
@@ -27,7 +27,10 @@
         <div id="resultado" class="resultado"></div>
 
         <!-- Mapa -->
-        <div id="map"></div>
+        <div id="map" style="display: none;"></div>
+
+        <!-- 🔁 Botão para nova busca -->
+        <button id="toggleBusca" class="toggle-busca" style="display: none;">Nova busca</button>
     </div>
 
     <script src="assets/js/script.js"></script>
