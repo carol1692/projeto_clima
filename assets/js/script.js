@@ -1,3 +1,72 @@
+/**
+ * 🌤️ Aplicativo de Previsão do Tempo
+ * -----------------------------------------------------------
+ * Script principal responsável por controlar toda a lógica do
+ * aplicativo de previsão do tempo, integrando-se com a API da
+ * Open-Meteo e com o mapa interativo do Leaflet.
+ *
+ * 📌 FUNCIONALIDADES
+ * -----------------------------------------------------------
+ * - Recebe o nome de uma cidade digitada pelo usuário;
+ * - Busca as coordenadas (latitude/longitude) via Geocoding API;
+ * - Obtém dados climáticos atuais e previsão de 5 dias;
+ * - Exibe as informações em formato de "accordions" coloridos;
+ * - Renderiza um mapa interativo com marcador na cidade pesquisada;
+ * - Atualiza o fundo e o ícone principal conforme o horário do dia;
+ * - Permite nova busca sem recarregar a página.
+ *
+ * 🌍 APIs UTILIZADAS
+ * -----------------------------------------------------------
+ * 1. Geocoding API:
+ *    https://geocoding-api.open-meteo.com/v1/search
+ *    ➜ Retorna nome, país, coordenadas e fuso horário da cidade.
+ *
+ * 2. Forecast API:
+ *    https://api.open-meteo.com/v1/forecast
+ *    ➜ Retorna dados de temperatura, condição e previsão diária.
+ *
+ * 🧭 BIBLIOTECAS EXTERNAS
+ * -----------------------------------------------------------
+ * - Leaflet.js: para exibir mapas e marcadores interativos.
+ *   https://leafletjs.com/
+ *
+ * 💡 PRINCIPAIS VARIÁVEIS
+ * -----------------------------------------------------------
+ * - inputCidade: campo de texto onde o usuário digita a cidade.
+ * - btnBuscar: botão para iniciar a busca.
+ * - resultado: área de exibição dos dados climáticos.
+ * - titulo: elemento <h1> dinâmico que muda ícone conforme a hora.
+ * - mapa, marcador: instâncias do Leaflet.
+ *
+ * ⚙️ FLUXO DE EXECUÇÃO
+ * -----------------------------------------------------------
+ * 1️⃣ O usuário clica no botão "Buscar" (ou pressiona Enter);
+ * 2️⃣ O app valida a entrada e mostra uma mensagem de carregamento;
+ * 3️⃣ As APIs são chamadas para buscar coordenadas e clima;
+ * 4️⃣ O resultado é formatado e exibido nos accordions:
+ *     - Clima Atual
+ *     - Localização
+ *     - Previsão de 5 dias
+ * 5️⃣ O mapa é exibido com marcador da cidade;
+ * 6️⃣ O botão "Nova busca" restaura a interface inicial.
+ *
+ * 🧠 TRATAMENTO DE ERROS
+ * -----------------------------------------------------------
+ * - Mensagens amigáveis para cidade inválida ou não encontrada;
+ * - Captura de exceções de rede com `try...catch`;
+ * - Logs detalhados de erros no console para depuração.
+ *
+ * ✨ AUTORA
+ * -----------------------------------------------------------
+ * Ana Carolina Lemos  
+ * Desenvolvedora Web — UNICAMP  
+ * Website: https://analemos.xyz
+ * GitHub: https://github.com/analemos
+ *
+ * Última atualização: Novembro/2025
+ */
+
+
 let mapa;
 let marcador;
 
