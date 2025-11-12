@@ -20,15 +20,21 @@ O fundo muda suavemente de acordo com o **horário do dia**, e os ícones també
 
 ## 🧩 Estrutura do Projeto
 
-📂 projeto-clima
-├── index.html
-├── 📂 assets
-│ ├── 📂 css
-│ │ └── style.css
-│ └── 📂 js
-│ └── script.js
+```
+projeto_clima
+├─ assets
+│  ├─ css
+│  │  └─ style.css
+│  ├─ img
+│  └─ js
+│     └─ script.js
+├─ index.html
+├─ package.json
+├─ README.md
+└─ tests
+   └─ script.test.js
 
-
+```
 ---
 
 ## 💡 Tecnologias Utilizadas
@@ -47,7 +53,7 @@ O fundo muda suavemente de acordo com o **horário do dia**, e os ícones també
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/SEU_USUARIO/projeto-clima.git
+    git clone https://github.com/SEU_USUARIO/projeto-clima.git
    ```
 
 2. **Acesse a pasta**
