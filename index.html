@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previsão do Tempo</title>
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
+
 <body>
-    <script src="api.js"></script>
+    <div class="container">
+        <h1 id="titulo">🌤️ Previsão do Tempo</h1>
+
+        <div class="search-box">
+            <input type="text" id="cidade" placeholder="Digite o nome da cidade...">
+            <button id="buscar">Buscar</button>
+        </div>
+
+        <div id="resultado" class="resultado"></div>
+
+        <!-- Mapa -->
+        <div id="map" style="display: none;"></div>
+
+        <!-- 🔁 Botão para nova busca -->
+        <button id="toggleBusca" class="toggle-busca" style="display: none;">Nova busca</button>
+    </div>
+
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
