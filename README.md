@@ -1,25 +1,62 @@
-# 🌤️ Previsão do Tempo
+# 🌤️ Aplicativo de Previsão do Tempo
 
-Aplicativo web simples, moderno e responsivo que exibe **condições climáticas em tempo real** e **previsão de 5 dias** com base no nome de uma cidade.  
-Feito com **HTML, CSS e JavaScript puro**, usando a API gratuita da [Open-Meteo](https://open-meteo.com/) e o mapa interativo do [Leaflet](https://leafletjs.com/).
-
----
-
-## 🚀 Demonstração
-
-🔹 O usuário digita o nome da cidade.  
-🔹 O app exibe:
-- Temperatura, vento e condição atual ☀️  
-- Localização e coordenadas 🌍  
-- Previsão dos próximos 5 dias 📅  
-- Um mapa interativo com marcador da cidade 🗺️  
-
-O fundo muda suavemente de acordo com o **horário do dia**, e os ícones também! 🌞🌙
+Um aplicativo web interativo desenvolvido em **HTML, CSS e JavaScript** que exibe a **previsão do tempo atual e dos próximos 5 dias** para qualquer cidade do mundo, utilizando dados da **API Open-Meteo**.  
+O projeto também inclui um **mapa interativo** com marcador da localização pesquisada, além de **mudanças visuais dinâmicas** conforme o horário do dia (dia/noite).
 
 ---
 
-## 🧩 Estrutura do Projeto
+## 🧭 Índice
 
+- [Descrição](#descrição)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação](#instalação)
+- [Como Executar](#como-executar)
+- [Exemplo de Uso](#exemplo-de-uso)
+- [Tratamento de Erros](#tratamento-de-erros)
+- [Possíveis Melhorias](#possíveis-melhorias)
+- [Licença](#licença)
+- [Autora](#autora)
+
+---
+
+## 🧩 Descrição
+
+O **App de Previsão do Tempo** permite buscar dados meteorológicos de forma rápida, simples e visualmente agradável.  
+Ele consome APIs públicas para obter **coordenadas geográficas** e **informações climáticas** de qualquer cidade, exibindo:
+
+- Clima atual (temperatura, vento, umidade, condição);
+- Localização detalhada (nome, país, coordenadas);
+- Previsão para os próximos 5 dias;
+- Fundo e ícones que mudam automaticamente conforme o horário local.
+
+---
+
+## ⚙️ Funcionalidades
+
+✅ Busca de cidade e exibição do clima em tempo real  
+✅ Previsão de 5 dias  
+✅ Mapa interativo com marcador (Leaflet.js)  
+✅ Mudança automática de tema (dia/noite)  
+✅ Interface responsiva e intuitiva  
+✅ Tratamento de erros e validação de entrada  
+✅ Atualização sem recarregar a página  
+
+---
+
+## 🧰 Tecnologias Utilizadas
+
+- **HTML5** — estrutura da aplicação  
+- **CSS3** — estilização moderna e responsiva  
+- **JavaScript (ES6)** — lógica principal e integração com APIs  
+- **Leaflet.js** — mapa interativo  
+- **Open-Meteo API** — dados meteorológicos  
+- **Geocoding API (Open-Meteo)** — busca de coordenadas
+
+---
+
+## 🗂️ Estrutura do Projeto
 ```
 projeto_clima
 ├─ assets
@@ -35,74 +72,79 @@ projeto_clima
    └─ script.test.js
 
 ```
----
-
-## 💡 Tecnologias Utilizadas
-
-| Tecnologia | Descrição |
-|-------------|------------|
-| 🌐 **HTML5** | Estrutura da aplicação |
-| 🎨 **CSS3** | Estilo e layout responsivo |
-| ⚙️ **JavaScript (ES6)** | Lógica de busca e interação |
-| 🧭 **Leaflet.js** | Exibição do mapa interativo |
-| ☁️ **Open-Meteo API** | Fonte dos dados climáticos |
 
 ---
 
-## 🖥️ Como Executar o Projeto
+## 🚀 Instalação
 
-1. **Clone o repositório**
+1. **Clone este repositório:**
 ```bash
- git clone https://github.com/SEU_USUARIO/projeto-clima.git
+    git clone https://github.com/analemos/projeto-clima.git
 ```
-
-2. **Acesse a pasta**
+2. **Acesse a pasta do projeto::**
 ```bash
-    cd projeto-clima
-```
-
+    cd projeto-clima 
+```   
 3. **Abra o arquivo HTML**
 ```bash
     Clique duas vezes em index.html
     ou
     Execute com um servidor local (VSCode Live Server, por exemplo)
 ```
-🌈 Funcionalidades
+## ▶️ Como Executar
 
-✅ Busca de cidade com nome parcial ou completo
-✅ Exibição de clima atual (temperatura, condição e vento)
-✅ Previsão para 5 dias em formato de cards
-✅ Mapa interativo com Leaflet
-✅ Design adaptável e transições suaves
-✅ Mudança automática de ícone conforme hora do dia
-✅ Interface intuitiva com accordions coloridos
+1.Abra o arquivo index.html no navegador.
 
-🧠 Lógica Principal
+2.Digite o nome de uma cidade no campo de busca.
 
-O app primeiro obtém as coordenadas da cidade via Geocoding API da Open-Meteo
+3.Clique em Buscar ou pressione Enter.
 
-Em seguida, consulta a previsão usando latitude, longitude e fuso horário
+4.Veja o resultado do clima atual, previsão de 5 dias e o mapa interativo.
 
-Os dados são formatados e exibidos em accordions interativos
+5.Clique em Nova Busca para pesquisar outra cidade.
 
-A interface é atualizada dinamicamente, sem recarregar a página
+## 🧪 Exemplo de Uso
 
-🌎 APIs Utilizadas
+Exemplo:
+Buscando por Campinas, o app exibirá:
 
-Geocoding API: https://geocoding-api.open-meteo.com/v1/search
+-Temperatura atual e condição (☀️, 🌧️ etc.)
 
-Forecast API: https://api.open-meteo.com/v1/forecast
+-Coordenadas e país
 
-🪄 Melhorias Futuras
+-Previsão detalhada para 5 dias
 
-✨ Adicionar detecção automática da localização do usuário
-✨ Implementar ícones climáticos personalizados
-✨ Adicionar histórico de cidades pesquisadas
-✨ Criar modo claro/escuro automático
+-Mapa com marcador da cidade
 
-🧑‍💻 Autora
+O fundo mudará para tons claros durante o dia e escuros à noite 🌙
+
+## 🛠️ Tratamento de Erros
+
+-O aplicativo lida com diversos cenários, como:
+
+-Entrada vazia → mensagem de alerta ao usuário;
+
+-Cidade não encontrada → aviso amigável e sem travar o app;
+
+-Falhas de rede → exibição de erro genérico;
+
+-Logs no console para depuração em modo desenvolvedor.
+
+## 💡 Possíveis Melhorias
+-Adicionar suporte a múltiplos idiomas
+-Exibir ícones de condição meteorológica personalizados
+-Permitir salvar cidades favoritas
+-Implementar histórico de pesquisas
+-Versão PWA (instalável no celular)
+
+## 🪪 Licença
+
+Este projeto está licenciado sob a licença MIT.
+Consulte o arquivo LICENSE
+
+## 👩‍💻 Autora
 
 Ana Carolina Lemos
-💼 Desenvolvedora Web | 🎓 UNICAMP
-💻 Experiência em Python, Flask, Django e front-end
+Desenvolvedora Web • UNICAMP 🎓
 🌐 analemos.xyz/portfolio
+
