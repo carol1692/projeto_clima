@@ -116,8 +116,7 @@ Buscando por Campinas, o app exibirá:
 
 -Mapa com marcador da cidade
 
-O fundo mudará para tons claros durante o dia e escuros à noite 🌙
-
+O icone ao lado do título "Previsão do tempo" mudará de acordo com o período do dia Manhã, Tarde e Noite 
 ## 🛠️ Tratamento de Erros
 
 -O aplicativo lida com diversos cenários, como:
