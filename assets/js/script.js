@@ -158,7 +158,7 @@ btnBuscar.addEventListener("click", async () => {
 	if (hora >= 6 && hora < 12) {
 		icone = "https://img.icons8.com/?size=50&id=648&format=png&color=FFFFFF"; // Sol da manhã
 	} else if (hora >= 12 && hora < 18) {
-		icone = "https://img.icons8.com/?size=100&id=SgirE9aEatqD&format=png&color=FFFFFF"; // Sol da tarde
+		icone = "https://img.icons8.com/?size=100&id=119762&format=png&color=FFFFFF"; // Sol da tarde
 	} else {
 		icone = "https://img.icons8.com/?size=50&id=xlD3xOrQjTJO&format=png&color=FFFFFF"; // Lua / noite
 	}
@@ -202,17 +202,26 @@ btnBuscar.addEventListener("click", async () => {
     // === 7️⃣ Mostrar resultado com ACCORDION ===
     // === 7️⃣ Mostrar resultado com ACCORDION (formato de cards) ===
 resultado.innerHTML = `
+<div> 
+  <div> <span class="temperatura">${temperature}°C </span> </div>
+ 
+  <div class="local"> <span >${name}, ${country} </span></div>
+  
+  <div class="data"><span >${dataFormatada}</span></div>
+ 
+</div>
 <div class="accordion">
     <button class="accordion-header">
         <div><img src="https://img.icons8.com/?size=100&id=2XXk4o30bTjl&format=png&color=FFFFFF" alt="icone" style="vertical-align: middle; width: 30px; height: 30px; margin-right: 10px;"> Clima Atual</div>
         <span class="accordion-arrow">▼</span>
     </button>
     <div class="accordion-content forecast-grid">
-        <div class="forecast-card"><strong>Temperatura:</strong><br>${temperature}°C</div>
+        
         <div class="forecast-card"><strong>Condição:</strong><br>${condicao}</div>
         <div class="forecast-card"><strong>Vento:</strong><br>${windspeed} km/h</div>
         <div class="forecast-card"><strong>Hora local:</strong><br>${horaFormatada}</div>
-        <div class="forecast-card"><strong>Data:</strong><br>${dataFormatada}</div>
+        <div class="forecast-card"><strong>Fuso horário:</strong><br>${timezone}</div>
+        
     </div>
 </div>
 
@@ -222,11 +231,11 @@ resultado.innerHTML = `
         <span class="accordion-arrow">▼</span>
     </button>
     <div class="accordion-content forecast-grid">
-        <div class="forecast-card"><strong>Local:</strong><br>${name}, ${country}</div>
+       
         <div class="forecast-card"><strong>Latitude:</strong><br>${latitude.toFixed(2)}°</div>
         <div class="forecast-card"><strong>Longitude:</strong><br>${longitude.toFixed(2)}°</div>
         <div class="forecast-card"><strong>Elevação:</strong><br>${elevation} m</div>
-        <div class="forecast-card"><strong>Fuso horário:</strong><br>${timezone}</div>
+        
     </div>
 </div>
 
